@@ -1,6 +1,61 @@
 {
   "projects": [
     {
+      "id": "react-velocity-starter",
+      "title": "React Velocity Starter",
+      "shortDescription": "Production-ready React TypeScript starter template with modern tooling",
+      "description": "A comprehensive React TypeScript starter template designed to accelerate web development with modern tooling and best practices. Features feature-based architecture, testing suite, internationalization, and automated code generation.",
+      "techStack": ["React 19", "TypeScript 5.8+", "Vite 6+", "Tailwind CSS 4", "Zustand", "TanStack Query", "Playwright", "shadcn/ui"],
+      "category": "starter-template",
+      "status": "completed",
+      "startDate": "2024-12-01",
+      "endDate": "2024-12-15",
+      "githubUrl": "https://github.com/manjunathagee/react-velocity-starter",
+      "liveUrl": "",
+      "storybookUrl": "",
+      "images": {
+        "thumbnail": "/images/projects/react-velocity-starter/thumbnail.jpg",
+        "gallery": [
+          "/images/projects/react-velocity-starter/architecture-overview.jpg",
+          "/images/projects/react-velocity-starter/development-experience.jpg",
+          "/images/projects/react-velocity-starter/testing-setup.jpg"
+        ],
+        "featured": "/images/projects/react-velocity-starter/hero-banner.jpg"
+      },
+      "features": [
+        "Feature-based modular architecture",
+        "Comprehensive testing suite with Playwright",
+        "Internationalization support",
+        "Automated code generation with Plop.js",
+        "Dark/Light theme switching",
+        "Responsive design system",
+        "Strict TypeScript configuration"
+      ],
+      "challenges": [
+        "Creating a flexible architecture that scales with project complexity",
+        "Balancing developer experience with production optimization",
+        "Integrating multiple modern tools without configuration conflicts"
+      ],
+      "learnings": [
+        "Advanced Vite configuration and optimization techniques",
+        "Modern React patterns and state management with Zustand",
+        "End-to-end testing strategies with Playwright"
+      ],
+      "role": "Creator & Maintainer",
+      "teamSize": 1,
+      "metrics": {
+        "features": 7,
+        "testCoverage": "85%+",
+        "buildTime": "<30s",
+        "devStartup": "<3s",
+        "impact": "Accelerates React project setup by 70%"
+      },
+      "tags": ["React", "TypeScript", "Vite", "Starter Template", "Modern Tooling"],
+      "featured": true,
+      "slug": "react-velocity-starter",
+      "industryImpact": "Provides developers with a comprehensive foundation for modern React applications, reducing initial setup time and ensuring best practices from project inception."
+    },
+    {
       "id": "react-ui-kit",
       "title": "React UI Kit",
       "shortDescription": "Comprehensive component library with 30+ production-ready components",
