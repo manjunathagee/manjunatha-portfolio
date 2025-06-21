@@ -1,0 +1,58 @@
+{
+  "posts": [
+    {
+      "id": "accessible-react-components",
+      "title": "Building Accessible React Components: A Senior Developer's Guide",
+      "slug": "accessible-react-components",
+      "excerpt": "Learn how to implement WCAG 2.1 AA accessibility standards in React components with practical examples and testing strategies.",
+      "content": "/blog/accessible-react-components.md",
+      "author": "Manjunatha C",
+      "publishDate": "2024-03-15",
+      "lastModified": "2024-03-15",
+      "status": "published",
+      "tags": ["React", "Accessibility", "WCAG", "Component Design"],
+      "category": "Accessibility",
+      "readTime": 8,
+      "featured": true,
+      "coverImage": "/images/blog/accessible-components-cover.jpg",
+      "metaDescription": "Complete guide to building accessible React components with WCAG 2.1 AA compliance, practical examples, and testing strategies.",
+      "seoKeywords": ["React accessibility", "WCAG compliance", "accessible components", "frontend accessibility"]
+    },
+    {
+      "id": "performance-optimization-react",
+      "title": "Performance Optimization Techniques for Modern React Applications",
+      "slug": "performance-optimization-react",
+      "excerpt": "Deep dive into React performance optimization including code splitting, lazy loading, and Core Web Vitals improvements.",
+      "content": "/blog/performance-optimization-react.md",
+      "author": "Manjunatha C",
+      "publishDate": "2024-02-20",
+      "lastModified": "2024-02-20",
+      "status": "published",
+      "tags": ["React", "Performance", "Bundle Optimization", "Core Web Vitals"],
+      "category": "Performance",
+      "readTime": 12,
+      "featured": false,
+      "coverImage": "/images/blog/performance-optimization-cover.jpg",
+      "metaDescription": "Advanced React performance optimization techniques including code splitting, lazy loading, and Core Web Vitals improvements.",
+      "seoKeywords": ["React performance", "code splitting", "bundle optimization", "Core Web Vitals"]
+    },
+    {
+      "id": "design-systems-scale",
+      "title": "Design Systems at Scale: Lessons from Building Component Libraries",
+      "slug": "design-systems-scale",
+      "excerpt": "Best practices for creating scalable design systems, component APIs, and documentation that teams actually use.",
+      "content": "/blog/design-systems-scale.md",
+      "author": "Manjunatha C",
+      "publishDate": "2024-01-10",
+      "lastModified": "2024-01-10",
+      "status": "published",
+      "tags": ["Design Systems", "Component Libraries", "TypeScript", "Storybook"],
+      "category": "Architecture",
+      "readTime": 10,
+      "featured": false,
+      "coverImage": "/images/blog/design-systems-cover.jpg",
+      "metaDescription": "Best practices for building scalable design systems and component libraries that development teams actually adopt and use.",
+      "seoKeywords": ["design systems", "component libraries", "scalable architecture", "design tokens"]
+    }
+  ]
+}

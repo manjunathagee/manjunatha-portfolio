@@ -1,0 +1,53 @@
+{
+  "site": {
+    "title": "Manjunatha C - Senior Frontend Engineer",
+    "description": "Senior Frontend Engineer with 11+ years of expertise in React/Angular ecosystems. Specializing in performance optimization, design systems, and technical leadership.",
+    "url": "https://manjunatha-portfolio.vercel.app",
+    "author": "Manjunatha C",
+    "email": "manjunathagee@gmail.com",
+    "phone": "+91 9686061236",
+    "location": "Bengaluru, Karnataka, India",
+    "tagline": "Building Exceptional Frontend Experiences",
+    "shortBio": "Senior Frontend Engineer with 11+ years of experience building scalable web applications and leading technical teams."
+  },
+  "social": {
+    "github": "https://github.com/manjunathagee",
+    "linkedin": "https://www.linkedin.com/in/manjunatha-citragar-54512827/",
+    "twitter": "https://twitter.com/manjunathac",
+    "email": "mailto:manjunathagee@gmail.com"
+  },
+  "navigation": {
+    "main": [
+      { "name": "Home", "href": "/", "key": "home" },
+      { "name": "Projects", "href": "/projects", "key": "projects" },
+      { "name": "Blog", "href": "/blog", "key": "blog" },
+      { "name": "About", "href": "/about", "key": "about" },
+      { "name": "Contact", "href": "/contact", "key": "contact" }
+    ]
+  },
+  "theme": {
+    "defaultMode": "system",
+    "supportedModes": ["light", "dark", "system"]
+  },
+  "features": {
+    "animations": true,
+    "darkMode": true,
+    "blogComments": false,
+    "analytics": true,
+    "rss": true
+  },
+  "seo": {
+    "keywords": [
+      "Senior Frontend Engineer",
+      "React Developer",
+      "Angular Developer",
+      "TypeScript",
+      "JavaScript",
+      "Performance Optimization",
+      "Design Systems",
+      "Technical Leadership"
+    ],
+    "ogImage": "/images/og-image.jpg",
+    "favicon": "/favicon.ico"
+  }
+}

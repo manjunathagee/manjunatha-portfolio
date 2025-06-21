@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "id": "react-ui-kit",
+      "title": "React UI Kit",
+      "shortDescription": "Comprehensive component library with 30+ production-ready components",
+      "description": "A modern React component library built with TypeScript, Tailwind CSS, and Radix UI. Features comprehensive accessibility support, extensive testing, and optimized bundle size.",
+      "techStack": ["TypeScript", "React 18", "Tailwind CSS", "Radix UI", "Storybook", "Vitest", "Chromatic"],
+      "category": "ui-library",
+      "status": "completed",
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-01",
+      "githubUrl": "https://github.com/manjunathagee/react-ui-kit",
+      "liveUrl": "https://685615b4675020c9c11b09a7-crlraeskec.chromatic.com/",
+      "storybookUrl": "https://react-ui-kit-storybook.vercel.app",
+      "images": {
+        "thumbnail": "/images/projects/react-ui-kit/thumbnail.jpg",
+        "gallery": [
+          "/images/projects/react-ui-kit/components-overview.jpg",
+          "/images/projects/react-ui-kit/storybook-screenshot.jpg",
+          "/images/projects/react-ui-kit/accessibility-testing.jpg"
+        ],
+        "featured": "/images/projects/react-ui-kit/hero-banner.jpg"
+      },
+      "features": [
+        "30+ production-ready components",
+        "WCAG 2.1 AA accessibility compliance",
+        "Dark/light theme support",
+        "Advanced data tables with sorting and filtering",
+        "Interactive forms with validation",
+        "Responsive navigation systems"
+      ],
+      "challenges": [
+        "Ensuring consistent accessibility across all components",
+        "Managing complex state interactions in data tables",
+        "Optimizing bundle size while maintaining functionality"
+      ],
+      "learnings": [
+        "Advanced TypeScript patterns for component APIs",
+        "Performance optimization techniques for large component libraries",
+        "Accessibility best practices and testing strategies"
+      ],
+      "role": "Lead Developer",
+      "teamSize": 1,
+      "metrics": {
+        "components": 30,
+        "testCoverage": "90%+",
+        "bundleSize": "<50KB gzipped",
+        "storiesCount": 280,
+        "impact": "Reduced development time by 40% for new projects"
+      },
+      "tags": ["React", "TypeScript", "Component Library", "Accessibility", "Storybook"],
+      "featured": true,
+      "slug": "react-ui-kit",
+      "industryImpact": "Streamlined frontend development process for multiple client projects, establishing consistent design patterns and reducing code duplication across the organization."
+    }
+  ]
+}
