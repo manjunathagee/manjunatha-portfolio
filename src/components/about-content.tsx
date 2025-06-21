@@ -36,7 +36,7 @@ interface AboutContentProps {
 }
 
 export function AboutContent({ personalInfo }: AboutContentProps) {
-  const { personal, skills, achievements } = personalInfo;
+  const { personal, skills } = personalInfo;
 
   const experience = [
     {

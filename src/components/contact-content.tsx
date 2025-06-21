@@ -63,7 +63,7 @@ export function ContactContent({ siteConfig }: ContactContentProps) {
       
       setSubmitStatus("success")
       setFormData({ name: "", email: "", subject: "", message: "" })
-    } catch (error) {
+    } catch {
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -102,8 +102,8 @@ export function ContactContent({ siteConfig }: ContactContentProps) {
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          I'm always interested in new opportunities, collaborations, and connecting with fellow developers. 
-          Let's discuss how we can work together!
+          I&apos;m always interested in new opportunities, collaborations, and connecting with fellow developers. 
+          Let&apos;s discuss how we can work together!
         </p>
       </motion.div>
 
@@ -163,11 +163,11 @@ export function ContactContent({ siteConfig }: ContactContentProps) {
           {/* Call to Action */}
           <Card>
             <CardHeader>
-              <CardTitle>Let's Work Together</CardTitle>
+              <CardTitle>Let&apos;s Work Together</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                I'm currently available for:
+                I&apos;m currently available for:
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center">
@@ -261,7 +261,7 @@ export function ContactContent({ siteConfig }: ContactContentProps) {
                 {submitStatus === "success" && (
                   <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
                     <p className="text-green-800 dark:text-green-200 text-sm">
-                      Your email client should open with the message. If it doesn't, please send an email directly to {siteConfig.site.email}
+                      Your email client should open with the message. If it doesn&apos;t, please send an email directly to {siteConfig.site.email}
                     </p>
                   </div>
                 )}

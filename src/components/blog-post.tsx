@@ -135,7 +135,7 @@ export function BlogPost({ post }: BlogPostProps) {
                 .replace(/^### (.*$)/gm, '<h3>$1</h3>')
                 .replace(/^#### (.*$)/gm, '<h4>$1</h4>')
                 .replace(/^\- (.*$)/gm, '<li>$1</li>')
-                .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+                .replace(/(<li>.*<\/li>)/, '<ul>$1</ul>')
                 .replace(/\n/g, '<br>')
             }}
           />

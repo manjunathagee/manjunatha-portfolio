@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface PersonalInfo {
   personal: {
@@ -33,7 +34,7 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ personalInfo }: HeroSectionProps) {
-  const { personal, experience } = personalInfo
+  const { personal } = personalInfo
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -53,10 +54,13 @@ export function HeroSection({ personalInfo }: HeroSectionProps) {
             className="mb-8"
           >
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-background shadow-lg">
-              <img
+              <Image
                 src={personal.profileImage}
                 alt={personal.name}
+                width={128}
+                height={128}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
           </motion.div>
