@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with Next.js 15, showcasing 11+ yea
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [manjunatha-portfolio.vercel.app](https://manjunatha-portfolio.vercel.app)
+Visit the live portfolio: [manjunatha-portfolio.vercel.app](https://manjunatha-portfolio.vercel.app/)
 
 ## 📋 Features
 
