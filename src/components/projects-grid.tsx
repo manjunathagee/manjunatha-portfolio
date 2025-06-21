@@ -84,7 +84,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
                 <div className="flex gap-2">
                   {project.liveUrl && (
                     <Button size="sm" variant="secondary" asChild>
-                      <Link href={project.liveUrl} target="_blank">
+                      <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <Eye className="h-4 w-4 mr-1" />
                         Live Demo
                       </Link>
@@ -92,7 +92,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
                   )}
                   {project.githubUrl && (
                     <Button size="sm" variant="secondary" asChild>
-                      <Link href={project.githubUrl} target="_blank">
+                      <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4" />
                       </Link>
                     </Button>
@@ -177,14 +177,14 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
               {/* Actions */}
               <div className="flex gap-2 pt-4">
                 <Button asChild variant="outline" size="sm" className="flex-1">
-                  <Link href={project.githubUrl || `/projects/${project.slug}`} target="_blank">
+                  <Link href={project.githubUrl || `/projects/${project.slug}`} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4 mr-1" />
                     View Code
                   </Link>
                 </Button>
                 {project.liveUrl && (
                   <Button asChild variant="default" size="sm">
-                    <Link href={project.liveUrl} target="_blank">
+                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <Eye className="h-4 w-4 mr-1" />
                       Live Demo
                     </Link>

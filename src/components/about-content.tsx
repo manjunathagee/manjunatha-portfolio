@@ -112,7 +112,7 @@ export function AboutContent({ personalInfo }: AboutContentProps) {
         </p>
         <div className="mt-8">
           <Button asChild size="lg">
-            <Link href={personal.resumeUrl} className="flex items-center gap-2">
+            <Link href={personal.resumeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Download className="h-4 w-4" />
               Download Resume
             </Link>

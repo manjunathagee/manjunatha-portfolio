@@ -146,13 +146,13 @@ export function ContactContent({ siteConfig }: ContactContentProps) {
             <h3 className="text-xl font-semibold mb-4">Connect with me</h3>
             <div className="flex space-x-4">
               <Button variant="outline" size="lg" asChild>
-                <Link href={siteConfig.social.github} target="_blank" className="flex items-center gap-2">
+                <Link href={siteConfig.social.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Github className="h-5 w-5" />
                   GitHub
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href={siteConfig.social.linkedin} target="_blank" className="flex items-center gap-2">
+                <Link href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Linkedin className="h-5 w-5" />
                   LinkedIn
                 </Link>

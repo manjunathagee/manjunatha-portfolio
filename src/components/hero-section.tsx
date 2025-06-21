@@ -127,7 +127,7 @@ export function HeroSection({ personalInfo }: HeroSectionProps) {
             </Button>
             
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link href={personal.resumeUrl} className="flex items-center gap-2">
+              <Link href={personal.resumeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Download className="h-4 w-4" />
                 Download Resume
               </Link>
@@ -142,14 +142,14 @@ export function HeroSection({ personalInfo }: HeroSectionProps) {
             className="flex justify-center space-x-6"
           >
             <Button variant="ghost" size="sm" asChild>
-              <Link href="https://github.com/manjunathagee" className="flex items-center gap-2">
+              <Link href="https://github.com/manjunathagee" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Github className="h-5 w-5" />
                 <span className="hidden sm:inline">GitHub</span>
               </Link>
             </Button>
             
             <Button variant="ghost" size="sm" asChild>
-              <Link href="https://www.linkedin.com/in/manjunatha-citragar-54512827/" className="flex items-center gap-2">
+              <Link href="https://www.linkedin.com/in/manjunatha-citragar-54512827/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Linkedin className="h-5 w-5" />
                 <span className="hidden sm:inline">LinkedIn</span>
               </Link>
