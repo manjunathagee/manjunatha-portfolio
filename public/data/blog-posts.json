@@ -53,6 +53,42 @@
       "coverImage": "/images/blog/design-systems-cover.jpg",
       "metaDescription": "Best practices for building scalable design systems and component libraries that development teams actually adopt and use.",
       "seoKeywords": ["design systems", "component libraries", "scalable architecture", "design tokens"]
+    },
+    {
+      "id": "react-ui-kit-component-library",
+      "title": "Building a Production-Ready React Component Library: From Concept to Chromatic",
+      "slug": "react-ui-kit-component-library",
+      "excerpt": "A deep dive into creating a comprehensive React component library with TypeScript, accessibility, and visual regression testing using Chromatic.",
+      "content": "/blog/react-ui-kit-component-library.md",
+      "author": "Manjunatha C",
+      "publishDate": "2024-12-22",
+      "lastModified": "2024-12-22",
+      "status": "published",
+      "tags": ["React", "TypeScript", "Component Library", "Accessibility", "Chromatic", "Storybook"],
+      "category": "Frontend Development",
+      "readTime": 15,
+      "featured": true,
+      "coverImage": "/images/blog/react-ui-kit-cover.jpg",
+      "metaDescription": "Learn how to build a production-ready React component library with 30+ components, full accessibility support, and automated visual testing.",
+      "seoKeywords": ["React component library", "TypeScript components", "accessibility", "Chromatic visual testing", "design systems"]
+    },
+    {
+      "id": "react-velocity-starter-modern-template",
+      "title": "React Velocity Starter: Building the Modern React Template I Wish I Had",
+      "slug": "react-velocity-starter-modern-template",
+      "excerpt": "Creating a feature-driven React starter template with modern tooling, comprehensive testing, and developer experience optimization.",
+      "content": "/blog/react-velocity-starter-modern-template.md",
+      "author": "Manjunatha C",
+      "publishDate": "2024-12-22",
+      "lastModified": "2024-12-22",
+      "status": "published",
+      "tags": ["React", "Vite", "TypeScript", "Starter Template", "Developer Experience", "Modern Tooling"],
+      "category": "Developer Tools",
+      "readTime": 12,
+      "featured": true,
+      "coverImage": "/images/blog/react-velocity-starter-cover.jpg",
+      "metaDescription": "A modern React starter template with feature-based architecture, Vite, TypeScript, and comprehensive testing setup for rapid development.",
+      "seoKeywords": ["React starter template", "Vite React", "TypeScript template", "modern React setup", "developer productivity"]
     }
   ]
 }
