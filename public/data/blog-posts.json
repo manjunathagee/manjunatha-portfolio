@@ -66,7 +66,7 @@
       "status": "published",
       "tags": ["React", "TypeScript", "Component Library", "Accessibility", "Chromatic", "Storybook"],
       "category": "Frontend Development",
-      "readTime": 15,
+      "readTime": 25,
       "featured": true,
       "coverImage": "/images/blog/react-ui-kit-cover.jpg",
       "metaDescription": "Learn how to build a production-ready React component library with 30+ components, full accessibility support, and automated visual testing.",

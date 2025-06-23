@@ -69,7 +69,7 @@ export function ReactComponentLibraryGuide() {
             </h1>
 
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              Learn how to build a comprehensive React component library from scratch, following the exact approach I used to create React UI Kit. This tutorial will take you through every step, from initial setup to deploying your components with visual regression testing.
+              Learn how to build a comprehensive React component library from scratch, following the exact approach I used to create React UI Kit. This complete tutorial covers 11 essential steps, from initial setup to deploying your components with visual regression testing and automated publishing.
             </p>
 
             <div className="flex items-center justify-between flex-wrap gap-4 mb-8 pb-8 border-b">
@@ -80,7 +80,7 @@ export function ReactComponentLibraryGuide() {
                 </div>
                 <div className="flex items-center">
                   <Clock className="h-4 w-4 mr-2" />
-                  15 min read
+                  25 min read
                 </div>
                 <div>
                   By Manjunatha C
@@ -469,6 +469,632 @@ module.exports = {
     },
   },
   plugins: [],
+}`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">🎨 Create Base Styles</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">src/styles/globals.css</code>:</p>
+              
+              <CodeBlock 
+                language="css"
+                code={`@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}`}
+                className="mb-4"
+              />
+            </section>
+
+            {/* Step 6: Create Your First Component */}
+            <section>
+              <h2 className="text-3xl font-bold mb-4">🧩 Step 6: Create Your First Component - Button</h2>
+              <p className="text-lg mb-4">Let&apos;s create a robust Button component using CVA (Class Variance Authority):</p>
+              
+              <h3 className="text-2xl font-semibold mb-3">📁 Component Structure</h3>
+              <CodeBlock 
+                language="bash"
+                code={`mkdir -p src/components/ui
+touch src/components/ui/button.tsx
+touch src/lib/utils.ts
+touch src/index.ts`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">🛠️ Utility Functions</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">src/lib/utils.ts</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">🔘 Button Component</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">src/components/ui/button.tsx</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
+import { cn } from "@/lib/utils"
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Button.displayName = "Button"
+
+export { Button, buttonVariants }`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">📋 Export Components</h3>
+              <p className="text-lg mb-4">Update <code className="bg-muted px-2 py-1 rounded">src/index.ts</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`export { Button, type ButtonProps } from "./components/ui/button"
+export { cn } from "./lib/utils"`}
+                className="mb-4"
+              />
+            </section>
+
+            {/* Step 7: Setup Storybook */}
+            <section>
+              <h2 className="text-3xl font-bold mb-4">📚 Step 7: Setup Storybook for Documentation</h2>
+              <p className="text-lg mb-4">Initialize Storybook in your components package:</p>
+              
+              <CodeBlock 
+                language="bash"
+                code="npx storybook@latest init"
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">⚙️ Configure Storybook</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">.storybook/main.ts</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`import type { StorybookConfig } from '@storybook/react-vite';
+
+const config: StorybookConfig = {
+  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+  ],
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
+  },
+  docs: {
+    autodocs: 'tag',
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
+};
+
+export default config;`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">🎨 Configure Storybook Styles</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">.storybook/preview.ts</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`import type { Preview } from '@storybook/react';
+import '../src/styles/globals.css';
+
+const preview: Preview = {
+  parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+  },
+};
+
+export default preview;`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">📖 Create Button Stories</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">src/components/ui/button.stories.tsx</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from './button';
+
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
+  component: Button,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: ['default', 'destructive', 'outline', 'secondary', 'ghost', 'link'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['default', 'sm', 'lg', 'icon'],
+    },
+  },
+};
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    children: 'Button',
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    children: 'Secondary',
+  },
+};
+
+export const Destructive: Story = {
+  args: {
+    variant: 'destructive',
+    children: 'Destructive',
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    variant: 'outline',
+    children: 'Outline',
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    variant: 'ghost',
+    children: 'Ghost',
+  },
+};
+
+export const Link: Story = {
+  args: {
+    variant: 'link',
+    children: 'Link',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    size: 'sm',
+    children: 'Small',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'lg',
+    children: 'Large',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    children: 'Disabled',
+  },
+};`}
+                className="mb-4"
+              />
+            </section>
+
+            {/* Step 8: Testing Setup */}
+            <section>
+              <h2 className="text-3xl font-bold mb-4">🧪 Step 8: Testing Setup with Vitest</h2>
+              <p className="text-lg mb-4">Create comprehensive tests for your components:</p>
+              
+              <h3 className="text-2xl font-semibold mb-3">⚙️ Configure Vitest</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">vitest.config.ts</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`import { defineConfig } from 'vitest/config';
+import { resolve } from 'path';
+
+export default defineConfig({
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./src/test/setup.ts'],
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+    },
+  },
+});`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">🛠️ Test Setup</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">src/test/setup.ts</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`import '@testing-library/jest-dom';`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">🧪 Button Component Tests</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">src/components/ui/button.test.tsx</code>:</p>
+              
+              <CodeBlock 
+                language="typescript"
+                code={`import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { describe, it, expect, vi } from 'vitest';
+import { Button } from './button';
+
+describe('Button', () => {
+  it('renders with default props', () => {
+    render(<Button>Test Button</Button>);
+    
+    const button = screen.getByRole('button', { name: /test button/i });
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveClass('bg-primary', 'text-primary-foreground');
+  });
+
+  it('applies variant classes correctly', () => {
+    render(<Button variant="secondary">Secondary Button</Button>);
+    
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('bg-secondary', 'text-secondary-foreground');
+  });
+
+  it('applies size classes correctly', () => {
+    render(<Button size="lg">Large Button</Button>);
+    
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('h-11', 'px-8');
+  });
+
+  it('handles click events', async () => {
+    const handleClick = vi.fn();
+    const user = userEvent.setup();
+    
+    render(<Button onClick={handleClick}>Clickable Button</Button>);
+    
+    const button = screen.getByRole('button');
+    await user.click(button);
+    
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('is disabled when disabled prop is true', () => {
+    render(<Button disabled>Disabled Button</Button>);
+    
+    const button = screen.getByRole('button');
+    expect(button).toBeDisabled();
+    expect(button).toHaveClass('disabled:opacity-50', 'disabled:pointer-events-none');
+  });
+
+  it('renders as child component when asChild is true', () => {
+    render(
+      <Button asChild>
+        <a href="/test">Link Button</a>
+      </Button>
+    );
+    
+    const link = screen.getByRole('link');
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/test');
+  });
+});`}
+                className="mb-4"
+              />
+            </section>
+
+            {/* Step 9: Visual Testing with Chromatic */}
+            <section>
+              <h2 className="text-3xl font-bold mb-4">👁️ Step 9: Visual Testing with Chromatic</h2>
+              <p className="text-lg mb-4">Set up visual regression testing to catch UI changes:</p>
+              
+              <h3 className="text-2xl font-semibold mb-3">🔑 Setup Chromatic</h3>
+              <ol className="list-decimal list-inside space-y-2 text-lg mb-4">
+                <li>Create account at <Link href="https://www.chromatic.com/" className="text-primary hover:underline">chromatic.com</Link></li>
+                <li>Connect your GitHub repository</li>
+                <li>Get your project token</li>
+                <li>Add token to your CI environment variables</li>
+              </ol>
+
+              <h3 className="text-2xl font-semibold mb-3">⚙️ Configure GitHub Actions</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">.github/workflows/chromatic.yml</code>:</p>
+              
+              <CodeBlock 
+                language="yaml"
+                code={`name: 'Chromatic'
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install pnpm
+        run: npm install -g pnpm
+      
+      - name: Install dependencies
+        run: pnpm install
+      
+      - name: Build components
+        run: pnpm run build --filter=@react-ui-kit/components
+      
+      - name: Publish to Chromatic
+        uses: chromaui/action@v11
+        with:
+          token: \${{ secrets.GITHUB_TOKEN }}
+          projectToken: \${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: packages/components
+          buildScriptName: build-storybook`}
+                className="mb-4"
+              />
+            </section>
+
+            {/* Step 10: Publishing Setup */}
+            <section>
+              <h2 className="text-3xl font-bold mb-4">🚀 Step 10: Publishing Setup with Changesets</h2>
+              <p className="text-lg mb-4">Automate versioning and publishing:</p>
+              
+              <h3 className="text-2xl font-semibold mb-3">📦 Initialize Changesets</h3>
+              <CodeBlock 
+                language="bash"
+                code="npx @changesets/cli init"
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">⚙️ Configure Changesets</h3>
+              <p className="text-lg mb-4">Edit <code className="bg-muted px-2 py-1 rounded">.changeset/config.json</code>:</p>
+              
+              <CodeBlock 
+                language="json"
+                code={`{
+  "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": []
+}`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">🔄 CI/CD for Publishing</h3>
+              <p className="text-lg mb-4">Create <code className="bg-muted px-2 py-1 rounded">.github/workflows/release.yml</code>:</p>
+              
+              <CodeBlock 
+                language="yaml"
+                code={`name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: \${{ github.workflow }}-\${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Build packages
+        run: pnpm run build
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run release
+        env:
+          GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: \${{ secrets.NPM_TOKEN }}`}
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">📝 Add Release Script</h3>
+              <p className="text-lg mb-4">Add to root <code className="bg-muted px-2 py-1 rounded">package.json</code>:</p>
+              
+              <CodeBlock 
+                language="json"
+                code={`"scripts": {
+  "changeset": "changeset",
+  "version-packages": "changeset version",
+  "release": "changeset publish"
+}`}
+                className="mb-4"
+              />
+            </section>
+
+            {/* Step 11: Usage Example */}
+            <section>
+              <h2 className="text-3xl font-bold mb-4">💡 Step 11: Usage Example</h2>
+              <p className="text-lg mb-4">Here&apos;s how to use your component library:</p>
+              
+              <h3 className="text-2xl font-semibold mb-3">📦 Installation</h3>
+              <CodeBlock 
+                language="bash"
+                code="npm install @your-org/react-ui-kit"
+                className="mb-4"
+              />
+
+              <h3 className="text-2xl font-semibold mb-3">🎯 Implementation</h3>
+              <CodeBlock 
+                language="typescript"
+                code={`import { Button } from "@your-org/react-ui-kit"
+import "@your-org/react-ui-kit/styles.css"
+
+function App() {
+  return (
+    <div className="p-8">
+      <Button variant="default" size="lg">
+        Primary Action
+      </Button>
+      
+      <Button variant="outline" size="sm">
+        Secondary Action  
+      </Button>
+      
+      <Button variant="destructive" disabled>
+        Disabled Action
+      </Button>
+    </div>
+  )
 }`}
                 className="mb-4"
               />
