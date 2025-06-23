@@ -107,7 +107,7 @@ export function DesignSystemsGuide() {
             {/* Introduction */}
             <section>
               <p className="text-lg leading-relaxed mb-6">
-                Throughout my career as a Senior Frontend Engineer, I've had the privilege of building and maintaining design systems that serve multiple teams and applications. Having created unified design systems serving 5+ internal applications and reducing UI development time by 35%, I've learned valuable lessons about what makes design systems successful at scale.
+                Throughout my career as a Senior Frontend Engineer, I&apos;ve had the privilege of building and maintaining design systems that serve multiple teams and applications. Having created unified design systems serving 5+ internal applications and reducing UI development time by 35%, I&apos;ve learned valuable lessons about what makes design systems successful at scale.
               </p>
             </section>
 
@@ -197,7 +197,7 @@ export function DesignSystemsGuide() {
               </div>
 
               <h3 className="text-2xl font-semibold mb-3">📈 Success Metrics That Matter</h3>
-              <p className="text-lg mb-4">Before diving into solutions, it's crucial to establish metrics:</p>
+              <p className="text-lg mb-4">Before diving into solutions, it&apos;s crucial to establish metrics:</p>
               
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-border">
@@ -553,7 +553,7 @@ export const AllVariants: Story = {
               
               <div className="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 p-4 mb-6">
                 <p className="text-lg">
-                  💡 <strong>Pro Tip</strong>: Create "Design System Champions" in each team who can help with adoption and provide feedback on component needs.
+                  💡 <strong>Pro Tip</strong>: Create &quot;Design System Champions&quot; in each team who can help with adoption and provide feedback on component needs.
                 </p>
               </div>
             </section>
@@ -609,7 +609,7 @@ export const AllVariants: Story = {
               </p>
               
               <p className="text-lg leading-relaxed">
-                The most successful design systems are those that evolve with their teams' needs while maintaining their core principles of consistency, accessibility, and developer experience.
+                The most successful design systems are those that evolve with their teams&apos; needs while maintaining their core principles of consistency, accessibility, and developer experience.
               </p>
             </section>
 

@@ -112,10 +112,10 @@ export function ReactVelocityStarterGuide() {
               </p>
             </section>
 
-            {/* What You'll Build */}
+            {/* What You&apos;ll Build */}
             <section>
-              <h2 className="text-3xl font-bold mb-4">🎯 What You'll Build</h2>
-              <p className="text-lg mb-4">By the end of this tutorial, you'll have created:</p>
+              <h2 className="text-3xl font-bold mb-4">🎯 What You&apos;ll Build</h2>
+              <p className="text-lg mb-4">By the end of this tutorial, you&apos;ll have created:</p>
               
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-border">
@@ -198,7 +198,7 @@ export function ReactVelocityStarterGuide() {
             {/* Step 1: Project Setup */}
             <section>
               <h2 className="text-3xl font-bold mb-4">🚀 Step 1: Project Initialization and Basic Setup</h2>
-              <p className="text-lg mb-4">Let's start by creating our project structure:</p>
+              <p className="text-lg mb-4">Let&apos;s start by creating our project structure:</p>
               
               <CodeBlock 
                 language="bash"
@@ -209,7 +209,7 @@ cd react-velocity-starter
 # Initialize the project
 npm init -y
 
-# Install pnpm globally if you haven't already
+# Install pnpm globally if you haven&apos;t already
 npm install -g pnpm`}
                 className="mb-6"
               />
@@ -708,10 +708,10 @@ pnpm build`}
 
             {/* Conclusion */}
             <section>
-              <h2 className="text-3xl font-bold mb-4">🎉 What You've Accomplished</h2>
+              <h2 className="text-3xl font-bold mb-4">🎉 What You&apos;ve Accomplished</h2>
               
               <p className="text-lg leading-relaxed mb-4">
-                Congratulations! You've created a modern, scalable React starter template that includes:
+                Congratulations! You&apos;ve created a modern, scalable React starter template that includes:
               </p>
               
               <div className="bg-green-50 dark:bg-green-950 border-l-4 border-green-400 p-4 mb-6">

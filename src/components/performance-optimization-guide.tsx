@@ -107,7 +107,7 @@ export function PerformanceOptimizationGuide() {
             {/* Introduction */}
             <section>
               <p className="text-lg leading-relaxed mb-6">
-                As a Senior Frontend Engineer with over 11 years of experience, I've witnessed the evolution of React applications from simple components to complex, enterprise-scale systems. Performance optimization has become crucial for delivering exceptional user experiences. In this article, I'll share proven techniques that have helped me achieve 40% average performance improvements across multiple projects.
+                As a Senior Frontend Engineer with over 11 years of experience, I&apos;ve witnessed the evolution of React applications from simple components to complex, enterprise-scale systems. Performance optimization has become crucial for delivering exceptional user experiences. In this article, I&apos;ll share proven techniques that have helped me achieve 40% average performance improvements across multiple projects.
               </p>
             </section>
 
@@ -208,7 +208,7 @@ export function PerformanceOptimizationGuide() {
               </div>
 
               <h3 className="text-2xl font-semibold mb-3">📀 Measuring Performance</h3>
-              <p className="text-lg mb-4">Before optimizing, it's essential to measure current performance using:</p>
+              <p className="text-lg mb-4">Before optimizing, it&apos;s essential to measure current performance using:</p>
               
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-border">
@@ -255,7 +255,7 @@ export function PerformanceOptimizationGuide() {
               <h2 className="text-3xl font-bold mb-4">📄 Code Splitting and Lazy Loading</h2>
               
               <h3 className="text-2xl font-semibold mb-3">⚡ Dynamic Imports</h3>
-              <p className="text-lg mb-4">Implement code splitting using React's lazy loading:</p>
+              <p className="text-lg mb-4">Implement code splitting using React&apos;s lazy loading:</p>
 
               <h4 className="text-xl font-semibold mb-3">Code Splitting Strategies</h4>
               
@@ -370,7 +370,7 @@ const Contact = lazy(() => import('./pages/Contact'));`}
                     <tr>
                       <td className="border border-border p-3 font-medium">Props always change</td>
                       <td className="border border-border p-3">❌ No</td>
-                      <td className="border border-border p-3">Won't prevent re-renders</td>
+                      <td className="border border-border p-3">Won&apos;t prevent re-renders</td>
                     </tr>
                   </tbody>
                 </table>
@@ -432,19 +432,19 @@ const Contact = lazy(() => import('./pages/Contact'));`}
                       <td className="border border-border p-3 font-medium">Named imports</td>
                       <td className="border border-border p-3"><Badge variant="outline">Smallest</Badge></td>
                       <td className="border border-border p-3">✅ Full</td>
-                      <td className="border border-border p-3"><code>import {`{ debounce }`} from 'lodash'</code></td>
+                      <td className="border border-border p-3"><code>import {`{ debounce }`} from &apos;lodash&apos;</code></td>
                     </tr>
                     <tr>
                       <td className="border border-border p-3 font-medium">Default imports</td>
                       <td className="border border-border p-3"><Badge variant="secondary">Medium</Badge></td>
                       <td className="border border-border p-3">❌ None</td>
-                      <td className="border border-border p-3"><code>import _ from 'lodash'</code></td>
+                      <td className="border border-border p-3"><code>import _ from &apos;lodash&apos;</code></td>
                     </tr>
                     <tr>
                       <td className="border border-border p-3 font-medium">Namespace imports</td>
                       <td className="border border-border p-3"><Badge variant="destructive">Largest</Badge></td>
                       <td className="border border-border p-3">❌ None</td>
-                      <td className="border border-border p-3"><code>import * as _ from 'lodash'</code></td>
+                      <td className="border border-border p-3"><code>import * as _ from &apos;lodash&apos;</code></td>
                     </tr>
                   </tbody>
                 </table>
@@ -509,7 +509,7 @@ npx webpack-bundle-analyzer build/static/js/*.js`}
                     <tr>
                       <td className="border border-border p-3 font-medium">Preload key resources</td>
                       <td className="border border-border p-3">15-25% improvement</td>
-                      <td className="border border-border p-3"><code>&lt;link rel="preload"&gt;</code></td>
+                      <td className="border border-border p-3"><code>&lt;link rel=&quot;preload&quot;&gt;</code></td>
                       <td className="border border-border p-3"><Badge variant="outline">Easy</Badge></td>
                     </tr>
                   </tbody>

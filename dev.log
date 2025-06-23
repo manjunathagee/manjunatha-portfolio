@@ -1,0 +1,13 @@
+
+> manjunatha-portfolio@0.1.0 dev
+> PORT=3001 next dev --turbopack
+
+   ▲ Next.js 15.3.4 (Turbopack)
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.0.107:3001
+
+ ✓ Starting...
+ ✓ Ready in 720ms
+ ○ Compiling /blog/[slug] ...
+ ✓ Compiled /blog/[slug] in 1346ms
+ HEAD /blog/react-ui-kit-component-library 200 in 1825ms

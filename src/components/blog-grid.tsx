@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { BlogThumbnail } from "@/components/ui/blog-thumbnail"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
@@ -72,19 +73,17 @@ export function BlogGrid({ posts }: BlogGridProps) {
     >
       {publishedPosts.map((post) => (
         <motion.div key={post.id} variants={itemVariants}>
-          <Card className="h-full hover:shadow-lg transition-shadow duration-300 group">
+          <Card className="h-full hover:shadow-lg transition-shadow duration-300 group overflow-hidden p-0 gap-0">
             {/* Cover Image */}
-            {post.coverImage && (
-              <div className="relative aspect-video overflow-hidden rounded-t-lg">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-muted-foreground/20">
-                    {post.title.split(" ").slice(0, 2).map(word => word[0]).join("")}
-                  </div>
-                </div>
-              </div>
-            )}
+            <div className="relative aspect-video overflow-hidden rounded-t-lg bg-muted m-0 p-0">
+              <BlogThumbnail 
+                title={post.title}
+                category={post.category}
+                className="absolute inset-0 w-full h-full m-0 p-0"
+              />
+            </div>
 
-            <CardHeader>
+            <CardHeader className="p-6">
               <div className="flex items-center justify-between mb-2">
                 <Badge variant="secondary">{post.category}</Badge>
                 {post.featured && (
@@ -110,7 +109,7 @@ export function BlogGrid({ posts }: BlogGridProps) {
               </div>
             </CardHeader>
 
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4 px-6 pb-6">
               <p className="text-muted-foreground leading-relaxed">
                 {post.excerpt}
               </p>

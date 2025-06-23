@@ -65,7 +65,7 @@ export function AccessibleReactComponentsGuide() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              Building Accessible React Components: A Senior Developer's Guide
+              Building Accessible React Components: A Senior Developer&apos;s Guide
             </h1>
 
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
@@ -108,7 +108,7 @@ export function AccessibleReactComponentsGuide() {
             {/* Introduction */}
             <section>
               <p className="text-lg leading-relaxed mb-6">
-                As a Senior Frontend Engineer with over 11 years of experience, I've seen firsthand how accessibility can make or break user experiences. Today, I'll share practical strategies for building React components that meet WCAG 2.1 AA standards while maintaining excellent developer experience.
+                As a Senior Frontend Engineer with over 11 years of experience, I&apos;ve seen firsthand how accessibility can make or break user experiences. Today, I&apos;ll share practical strategies for building React components that meet WCAG 2.1 AA standards while maintaining excellent developer experience.
               </p>
             </section>
 
@@ -116,7 +116,7 @@ export function AccessibleReactComponentsGuide() {
             <section>
               <h2 className="text-3xl font-bold mb-4">🎯 Why Accessibility Matters More Than Ever</h2>
               <p className="text-lg mb-4">
-                Accessibility isn't just about compliance—it's about creating inclusive experiences that work for everyone. With over 1 billion people worldwide living with disabilities, accessible design isn't optional; it's essential.
+                Accessibility isn&apos;t just about compliance—it&apos;s about creating inclusive experiences that work for everyone. With over 1 billion people worldwide living with disabilities, accessible design isn&apos;t optional; it&apos;s essential.
               </p>
               
               <div className="overflow-x-auto">
@@ -658,12 +658,12 @@ describe('SearchInput Accessibility', () => {
             {/* Conclusion */}
             <section>
               <p className="text-lg leading-relaxed mb-4">
-                Building accessible React components requires intentional design and development practices. By following these patterns and incorporating accessibility testing into your workflow, you'll create components that work beautifully for all users.
+                Building accessible React components requires intentional design and development practices. By following these patterns and incorporating accessibility testing into your workflow, you&apos;ll create components that work beautifully for all users.
               </p>
               
               <div className="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 p-4 my-6">
                 <p className="text-lg italic">
-                  💡 <strong>Remember</strong>: Accessibility is not a feature to add later—it's a fundamental aspect of good component design that should be considered from the very beginning of your development process.
+                  💡 <strong>Remember</strong>: Accessibility is not a feature to add later—it&apos;s a fundamental aspect of good component design that should be considered from the very beginning of your development process.
                 </p>
               </div>
             </section>

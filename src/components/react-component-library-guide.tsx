@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { CodeBlock } from "@/components/ui/code-block"
-import { Calendar, Clock, ArrowLeft, Share2, ExternalLink, Github } from "lucide-react"
+import { Calendar, Clock, ArrowLeft, Share2, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 export function ReactComponentLibraryGuide() {
@@ -107,8 +107,8 @@ export function ReactComponentLibraryGuide() {
             
             {/* What We'll Build Section */}
             <section>
-              <h2 className="text-3xl font-bold mb-4">🎯 What We'll Build</h2>
-              <p className="text-lg mb-4">By the end of this tutorial, you'll have created:</p>
+              <h2 className="text-3xl font-bold mb-4">🎯 What We&apos;ll Build</h2>
+              <p className="text-lg mb-4">By the end of this tutorial, you&apos;ll have created:</p>
               
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-border">
@@ -191,7 +191,7 @@ export function ReactComponentLibraryGuide() {
             {/* Step 1: Project Setup */}
             <section>
               <h2 className="text-3xl font-bold mb-4">🚀 Step 1: Project Setup and Monorepo Structure</h2>
-              <p className="text-lg mb-4">Let's start by creating our monorepo structure using pnpm workspaces:</p>
+              <p className="text-lg mb-4">Let&apos;s start by creating our monorepo structure using pnpm workspaces:</p>
               
               <CodeBlock 
                 language="bash"
